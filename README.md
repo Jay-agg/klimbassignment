@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# User Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an assignment for Klimb.io Frontend Developer Internship.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User CRUD Operations**: Add, edit, and view users.
+- **Search Functionality**: Search users by email with autocomplete suggestions.
+- **Autocomplete Suggestions**: Search suggestions displayed in the format "Name - Email".
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces.
+- **React Router**: For routing between different views (e.g., user list, user form).
+- **Local Storage**: To persist user data across page reloads.
+- **Tailwind CSS**: For styling and responsive design.
+- **Heroicons**: For icons used in search and add actions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+/src
+  /components
+    UserForm.js         # Component for adding and editing user details
+    UserList.js         # Component for displaying the list of users and search functionality
+  App.js                # Main component managing routes
+  index.js              # Entry point of the React application
+  styles.css            # Global styles (Tailwind CSS)
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+### User Form
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Add User**: Navigate to `/add` to access the user form where you can enter user details.
+- **Edit User**: Click "Edit" on a user entry in the list to modify existing details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User List
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Search**: Use the search bar to find users by email. Suggestions will appear as you type, formatted as "Name - Email".
+- **View Details**: Click "Edit" to modify user details.
 
-### `npm run eject`
+## Code Explanation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### UserForm Component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Handles adding and editing user details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **State Management**: Uses React's `useState` to manage form data.
+- **Data Persistence**: Reads from and writes to local storage.
+- **Form Handling**: Submits form data and updates local storage with new or edited user information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### UserList Component
 
-## Learn More
+Displays the list of users and provides search functionality.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **State Management**: Uses React's `useState` to manage search terms, users, and suggestions.
+- **Search and Autocomplete**: Filters users based on email input and shows suggestions.
+- **Data Fetching**: Retrieves users from local storage and populates the list.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Created by Jayant Aggarwal
